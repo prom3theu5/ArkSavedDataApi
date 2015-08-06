@@ -1,0 +1,40 @@
+{
+    "webroot": "wwwroot",
+    "version": "1.0.0-*",
+
+    "dependencies": {
+        "Microsoft.AspNet.Mvc": "6.0.0-beta5",
+        "Microsoft.AspNet.Server.IIS": "1.0.0-beta5",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta5",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-beta5",
+        "System.Net.Http": "4.0.0-beta-23019",
+        "Microsoft.Framework.Configuration.Json": "1.0.0-beta5"
+    },
+
+    "commands": {
+        "web": "Microsoft.AspNet.Hosting --config hosting.ini"
+    },
+
+    "frameworks": {
+        "dnx451": { },
+        "dnxcore50": {
+            "dependencies": {
+                "System.Net.Sockets": "4.0.10-beta-23019",
+                "System.Net.NameResolution": "4.0.0-beta-23019"
+            }
+        }
+    },
+
+    "exclude": [
+        "wwwroot",
+        "node_modules",
+        "bower_components"
+    ],
+    "publishExclude": [
+        "node_modules",
+        "bower_components",
+        "**.xproj",
+        "**.user",
+        "**.vspscc"
+    ]
+}
